@@ -1,6 +1,6 @@
 image2ascii
 ===========
-# Requirements
+## Requirements
 ```bash
 pip install -r requirements.txt
 ```
@@ -8,7 +8,7 @@ pip install -r requirements.txt
 | Name   | Ver    |
 |--------|--------|
 | pillow | 10.2.0 |
-# How to use
+## How to use
 * import library
   * ```python
       from image2ascii import image2ascii
