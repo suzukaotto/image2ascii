@@ -1,7 +1,7 @@
 from PIL import Image
 
 def image2ascii(image_path:str, width:int, height:int, 
-                ascii_chars:str="@%#*+=-:. ", alpha:str=' ') -> str:
+                ascii_chars:str="@%#*+=-:. ", black:str=' ') -> str:
     img = Image.open(image_path)
     img = img.resize((width, height))
     img = img.convert('L')
@@ -11,8 +11,8 @@ def image2ascii(image_path:str, width:int, height:int,
     ascii_str = ''
     for i, brt_value in enumerate(pixels):
         if brt_value == 0:
-            # if alpha channel (brightness 0)
-            ascii_str += alpha
+            # if alpha channel or black (brightness 0)
+            ascii_str += black
         else:
             ascii_str += ascii_chars[min(int(brt_value / (256 / len(ascii_chars))), len(ascii_chars) - 1)]
         
