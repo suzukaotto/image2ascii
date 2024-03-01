@@ -1,6 +1,10 @@
 image2ascii
 ===========
 # Requirements
+```bash
+pip install -r requirements.txt
+```
+
 | Name   | Ver    |
 |--------|--------|
 | pillow | 10.2.0 |
